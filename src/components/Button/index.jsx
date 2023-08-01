@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { Container } from "./styles";
 
-export const Button = ({ title, icon: Icon }) => {
+export const Button = ({ title, icon: Icon, ...rest }) => {
   return (
-    <Container type="button">
+    <Container type="button" {...rest}>
       {title}
       {<Icon />}
     </Container>
@@ -12,5 +12,5 @@ export const Button = ({ title, icon: Icon }) => {
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
-  icon: PropTypes.node,
+  icon: PropTypes.func,
 };
