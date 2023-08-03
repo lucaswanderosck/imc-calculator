@@ -8,8 +8,9 @@ export default createGlobalStyle`
         font-family: "Roboto", sans-serif;
     }
 
-    body {
+    html, body {
         background: ${({ theme }) => theme.colors.background};
         -webkit-font-smoothing: antialiased;
+        overflow: hidden;
     }
 `;
