@@ -2,11 +2,11 @@ import { Container } from "./styles";
 import { FiX } from "react-icons/fi";
 import PropTypes from "prop-types";
 
-export const Modal = ({ result, onClose }) => {
+export const Modal = ({ message, onClose }) => {
   return (
     <Container>
-      <div >
-        <h2>{result}</h2>
+      <div>
+        <h2>{message}</h2>
         <FiX onClick={onClose}></FiX>
       </div>
     </Container>
@@ -14,6 +14,6 @@ export const Modal = ({ result, onClose }) => {
 };
 
 Modal.propTypes = {
-  result: PropTypes.string,
-  onClose: PropTypes.func.isRequired
+  message: PropTypes.string,
+  onClose: PropTypes.func,
 };

@@ -10,58 +10,45 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 
   > div {
-    position: relative;
     background-color: ${({ theme }) => theme.colors.white};
+    position: relative;
     margin: auto;
-    padding: 48px 16px;
+    padding: 16px;
     text-align: center;
     border-radius: 6px;
-    width: 428px;
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
+    width: 380px;
+    display: inline-block;
+    animation: fadeInDown;
+    animation-duration: 0.8s;
 
-    > h2 {
+    h2 {
       color: ${({ theme }) => theme.colors.blue_2};
-      font-size: 32px;
-      font-weight: bold;
+      line-height: 32px;
+      font-size: 20px;
+      border: 2px solid ${({ theme }) => theme.colors.gray_3};
+      border-radius: 6px;
+      padding: 48px 16px;
     }
 
     > svg {
       position: absolute;
-      top: 0;
-      right: 0;
-      padding: 4px 12px;
+      top: 24px;
+      right: 24px;
       font-weight: bold;
-      font-size: 46px;
-      color: ${({ theme }) => theme.colors.blue_2};
+      font-size: 28px;
+      color: gray;
       cursor: pointer;
     }
-  }
 
-  @-webkit-keyframes animatetop {
-    from {
-      top: -300px;
-      opacity: 0;
+    @media (max-width: 380px) {
+      width: 330px;
     }
-    to {
-      top: 0;
-      opacity: 1;
-    }
-  }
 
-  @keyframes animatetop {
-    from {
-      top: -300px;
-      opacity: 0;
-    }
-    to {
-      top: 0;
-      opacity: 1;
+    @media (max-width: 340px) {
+      width: 280px;
     }
   }
 `;

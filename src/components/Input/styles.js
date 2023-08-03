@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.input`
   display: block;
   width: 100%;
-  margin-bottom: 12px;
+  margin: 8px 0 14px;
   padding: 14px 12px;
   background-color: ${({ theme }) => theme.colors.gray_1};
   color: ${({ theme }) => theme.colors.gray_4};
