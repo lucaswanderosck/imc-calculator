@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { Container } from "./styles";
 import { FiArrowRight } from "react-icons/fi";
+import { Container } from "./styles";
 
 export const Button = ({ title, ...rest }) => {
   return (

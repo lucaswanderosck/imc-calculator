@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { Modal } from "../../components/Modal";
 import { Error } from "../../components/Error";
+import { Input } from "../../components/Input";
+import { Modal } from "../../components/Modal";
 
 import { Container } from "./styles";
 
@@ -92,7 +92,9 @@ export const Home = () => {
       </form>
 
       {errorPopup && <Error />}
-      {openModal && (<Modal message={finalResult} onClose={handleCloseModal}></Modal>)}
+      {openModal && (
+        <Modal message={finalResult} onClose={handleCloseModal}></Modal>
+      )}
     </Container>
   );
 };
